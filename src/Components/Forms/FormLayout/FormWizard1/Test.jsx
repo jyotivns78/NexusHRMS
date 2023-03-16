@@ -8,17 +8,43 @@ import Final from "./Components/Forms/Final";
 
 
 
+
 const Test = () => {
-  
+
+
   //state for steps
   const [step, setstep] = useState(1);
 
   //state for form data
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    age: "",
-    email: ""
+    orgName: "",
+    orgEmail: "",
+    orgNumber: "",
+    orgAddress: "",
+    panNumber: "",
+    tinNumber: "",
+    tanNumber: "",
+    gstNumber: "",
+    cinNumber: "",
+    factoryLicence: "",
+    moa: "",
+    consent: "",
+    certificateNumber: "",
+    pfCode: "",
+    esicNumber: "",
+    taxNumber: "",
+    clraNumber: "",
+    ismwNumber: "",
+    labourWelfare: "",
+    businessUnit: "",
+    grades: "",
+    salaryGrade: "",
+    departmentName: "",
+    department: "",
+    subDepartment: "",
+    employeeCategorry: "",
+    workLocation: ""
+
   })
 
   // function for going to next step by increasing step state by 1
@@ -34,23 +60,26 @@ const Test = () => {
   // handling form input data by taking onchange value and updating our previous form data state
   const handleInputData = input => e => {
     // input value from the form
-    const {value } = e.target;
+    const { value } = e.target;
 
     //updating for data state taking previous state and then adding new value to create new object
     setFormData(prevState => ({
       ...prevState,
       [input]: value
-  }));
+    }));
   }
 
 
-// javascript switch case to show different form in each step
+
+
+  // javascript switch case to show different form in each step
   switch (step) {
     // case 1 to show stepOne form and passing nextStep, prevStep, and handleInputData as handleFormData method as prop and also formData as value to the fprm
     case 1:
       return (
         <div className="App">
           <Container>
+
             <Row>
               {/* <Col  md={{ span: 6, offset: 3 }} className="custom-margin"> */}
               <Col sm="12" className="custom-margin" style={{ marginLeft: "0px" }}>
@@ -74,7 +103,7 @@ const Test = () => {
           </Container>
         </div>
       );
-      // case 3 to show stepTwo form passing nextStep, prevStep, and handleInputData as handleFormData method as prop and also formData as value to the fprm
+    // case 3 to show stepTwo form passing nextStep, prevStep, and handleInputData as handleFormData method as prop and also formData as value to the fprm
     case 3:
       return (
         <div className="App">
@@ -88,14 +117,14 @@ const Test = () => {
           </Container>
         </div>
       );
-      // Only formData is passed as prop to show the final value at form submit
+    // Only formData is passed as prop to show the final value at form submit
     case 4:
       return (
         <div className="App">
           <Container>
             <Row>
-              <Col  md={{ span: 6, offset: 3 }} className="custom-margin">
-                <Final values={formData}  />
+              <Col md={{ span: 6, offset: 3 }} className="custom-margin">
+                <Final values={formData} />
               </Col>
             </Row>
           </Container>
