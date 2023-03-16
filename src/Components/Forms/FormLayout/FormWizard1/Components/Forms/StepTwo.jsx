@@ -250,6 +250,7 @@ const StepTwo = ({ nextStep, prevStep, values }) => {
                 type="number"
                 name="panNumber"
                 id="panNumber"
+                onKeyUp={ validatePAN }
               />
                <span id="panNumber-error" className="formerror"></span>
               </Col>
@@ -260,6 +261,7 @@ const StepTwo = ({ nextStep, prevStep, values }) => {
                 type="number"
                 name="tinNumber"
                 id="tinNumber"
+                onKeyUp={ validateTIN }
               />
                <span id="tinNumber-error" className="formerror"></span>
              </Col>
@@ -270,6 +272,7 @@ const StepTwo = ({ nextStep, prevStep, values }) => {
                 type="number"
                 name="tanNumber"
                 id="tanNumber"
+                onKeyUp={ validateTAN }
               />
                <span id="tanNumber-error" className="formerror"></span>
              </Col>
@@ -284,6 +287,7 @@ const StepTwo = ({ nextStep, prevStep, values }) => {
                 type="number"
                 name="gstNumber"
                 id="gstNumber"
+                onKeyUp={ validateGST }
               />
                <span id="gstNumber-error" className="formerror"></span>
               </Col>
@@ -294,6 +298,7 @@ const StepTwo = ({ nextStep, prevStep, values }) => {
                 type="number"
                 name="cinNumber"
                 id="cinNumber"
+                onKeyUp={ validateCIN }
               />
                <span id="cinNumber-error" className="formerror"></span>
              </Col>
@@ -304,6 +309,7 @@ const StepTwo = ({ nextStep, prevStep, values }) => {
                 type="number"
                 name="factoryLicence"
                 id="factoryLicence"
+                onKeyUp={ validateFactoryLicence }
               />
                <span id="factoryLicence-error" className="formerror"></span>
              </Col>
@@ -318,6 +324,7 @@ const StepTwo = ({ nextStep, prevStep, values }) => {
                 type="text"
                 name="moa"
                 id="moa"
+                onKeyUp={ validateMOA }
               />
                <span id="moa-error" className="formerror"></span>
               </Col>
@@ -328,6 +335,7 @@ const StepTwo = ({ nextStep, prevStep, values }) => {
                 type="text"
                 name="consent"
                 id="consent"
+                onKeyUp={ validatePollutionConsent }
               />
                <span id="consent-error" className="formerror"></span>
              </Col>
@@ -338,6 +346,7 @@ const StepTwo = ({ nextStep, prevStep, values }) => {
                 type="number"
                 name="certificateNumber"
                 id="certificateNumber"
+                onKeyUp={ validateCertificateNo }
               />
                <span id="certificate-error" className="formerror"></span>
              </Col>
@@ -352,6 +361,7 @@ const StepTwo = ({ nextStep, prevStep, values }) => {
                 type="number"
                 name="pfCode"
                 id="pfCode"
+                onKeyUp={ validatePfCode }
               />
                <span id="pfCode-error" className="formerror"></span>
               </Col>
@@ -362,6 +372,7 @@ const StepTwo = ({ nextStep, prevStep, values }) => {
                 type="number"
                 name="esicNumber"
                 id="esicNumber"
+                onKeyUp={ validateEsicCode }
               />
                <span id="ESIC-error" className="formerror"></span>
              </Col>
@@ -372,6 +383,7 @@ const StepTwo = ({ nextStep, prevStep, values }) => {
                 type="number"
                 name="taxNumber"
                 id="taxNumber"
+                onKeyUp={ validateTaxCode }
               />
                <span id="tax-error" className="formerror"></span>
              </Col>
